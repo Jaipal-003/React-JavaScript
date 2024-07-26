@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      
+      <h1 className='align-middle'>Currency Convertor</h1>
     </>
   )
 }
