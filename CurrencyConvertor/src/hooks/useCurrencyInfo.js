@@ -7,9 +7,9 @@ function useCurrencyInfo(currency){
         fetch(`https://latest.currency-api.pages.dev/v1/currencies/${currency}.json`)
         .then((res) => res.json())
         .then((res) => setDate(res[currency]))
-        console.log(data);
+        console.table(data);
     },[currency])
     return data
 }
 
-
+export default useCurrencyInfo;
