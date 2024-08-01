@@ -5,10 +5,10 @@ export const ThemeContext = createContext({
   darkTheme: () => {},
   lightTheme: () => {},
 
-});
+})
 
 export const ThemeProvider = ThemeContext.Provider
 
-export default fuction useTheme(){
-    return UserContext
+export default function useTheme(){
+    return useContext(ThemeContext)
 }
