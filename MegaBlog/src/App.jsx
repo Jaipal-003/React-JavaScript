@@ -6,7 +6,9 @@ function App() {
   
   return (
     <>
-    <h1>Blog App with Appwrite</h1>
+    <h1>Blog App with Appwrite
+      
+    </h1>
       
     </>
   )
