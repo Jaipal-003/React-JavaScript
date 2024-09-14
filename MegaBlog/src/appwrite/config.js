@@ -23,6 +23,7 @@ async createdPost({title, slug, content, featuredImage, status, userId}){
         )
     } catch (error) {
         console.log("Appwite serive :: createdPost :: error", error);
+        throw error; // You can return a custom error if preferred
     }
 
 }
