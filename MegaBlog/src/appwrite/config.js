@@ -31,6 +31,26 @@ export class Service {
       throw error; // You can return a custom error if preferred
     }
   }
+
+  async updatePost (slug,{ title,
+    content,
+    featuredImage,
+    status,
+    }){
+        try {
+            return await this.databases.updateDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug,{
+                    title,content,featuredImage,status,
+                }
+            );
+        } catch (error) {
+            console.log("Appwrite serive :: updatePost :: error",error);
+        }
+    }
+
+
 }
 
 const service = new Service();
