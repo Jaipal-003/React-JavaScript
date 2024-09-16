@@ -10,7 +10,7 @@ export class Service {
       .setEndpoint(conf.appwriteUrl)
       .setProject(conf.appwriteProjectId);
     this.databases = new Databases(this.client);
-  }
+  }     
 
   async createdPost({ title, slug, content, featuredImage, status, userId }) {
     try {
