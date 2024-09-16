@@ -38,7 +38,6 @@ export class AuthService{
             throw error; // Re-throw the error for higher-level handling
         }
     }
-
     // getCurrentUser is check user is login or not
     async getCurrentUser(){
         try {
@@ -50,7 +49,6 @@ export class AuthService{
         }
         return null;
     } 
-
     async logout(){
         try {
             return await this.account.deleteSessions();
