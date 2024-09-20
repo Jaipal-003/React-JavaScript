@@ -1,5 +1,6 @@
 import conf from "../conf.js";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
+
 export class Service {
   client = new Client();
   databases;
@@ -46,7 +47,7 @@ export class Service {
     } catch (error) {
       console.log("Appwrite serive :: updatePost :: error", error);
     }
-  }
+  } 
 }
 const service = new Service();
 export default service;
