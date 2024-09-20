@@ -12,7 +12,6 @@ export class Service {
     this.databases = new Databases(this.client);
   }     
 
-  
   async createdPost({ title, slug, content, featuredImage, status, userId }) {
     try {
       return await this.databases.createDocument(
