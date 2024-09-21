@@ -46,6 +46,7 @@ export class Service {
       );
     } catch (error) {
       console.log("Appwrite serive :: updatePost :: error", error);
+      
     }
   } 
 }
