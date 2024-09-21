@@ -46,7 +46,7 @@ export class AuthService{
             console.error("getCurrentUser:", error);
             throw error; // Re-throw the error for higher-level handling
         }
-        return null;
+        return  null;
     } 
     async logout(){
         try {
