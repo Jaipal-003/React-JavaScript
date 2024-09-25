@@ -30,7 +30,6 @@ export class Service {
       throw error; // You can return a custom error if preferred
     }
   }
-
   async deletePost(slug){
     try {
       await this.databases.deleteDocument(
@@ -43,7 +42,7 @@ export class Service {
       throw error; // You can return a custom error if preferred
     }
   }
-  
+
 
   async updatePost(slug, { title, content, featuredImage, status }) {
     try {
