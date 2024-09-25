@@ -18,7 +18,7 @@ export class Service {
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug,
-        {title,
+        {title, 
           content,
           featuredImage,
           status,
@@ -27,6 +27,19 @@ export class Service {
       );
     } catch (error) {
       console.log("Appwite serive :: createdPost :: error", error);
+      throw error; // You can return a custom error if preferred
+    }
+  }
+
+  async deletePost(slug){
+    try {
+      await this.databases.deleteDocument(
+        conf.appwriteDatabaseId,
+        conf.appwriteCollectionId,slug
+      )
+      return true;
+    } catch (error) {
+      console.log("Appwite serive :: deletePost :: error", error);
       throw error; // You can return a custom error if preferred
     }
   }
