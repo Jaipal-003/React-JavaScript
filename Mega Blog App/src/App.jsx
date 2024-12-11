@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
-
+  const dispatch = useDispatch()
   useEffect(()=>{
     authService.getCurrentUser()
     .then((userData) => {
