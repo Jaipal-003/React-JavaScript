@@ -15,10 +15,10 @@ function App() {
         
         dispatch(login({userData}))
       }else{
-        dispatch(logout())
+        dispatch(logout()) 
       }
     })
-    .finally(() => setLoading(false))
+    .finally(() => setLoading(false)) 
   },[])
     return ! loading ? (
       <div className="min-h-sc flex flex-wrap content-between bg-gray-400">
